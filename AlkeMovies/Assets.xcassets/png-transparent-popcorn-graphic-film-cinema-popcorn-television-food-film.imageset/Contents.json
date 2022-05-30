@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "png-transparent-popcorn-graphic-film-cinema-popcorn-television-food-film.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "png-transparent-popcorn-graphic-film-cinema-popcorn-television-food-film@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "png-transparent-popcorn-graphic-film-cinema-popcorn-television-food-film@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,6 @@
+framework module Pods_AlkeMovies {
+  umbrella header "Pods-AlkeMovies-umbrella.h"
+
+  export *
+  module * { export * }
+}
