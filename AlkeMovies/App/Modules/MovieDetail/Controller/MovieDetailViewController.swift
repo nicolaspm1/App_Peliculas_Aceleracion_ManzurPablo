@@ -9,6 +9,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieOverview: UILabel!
@@ -37,6 +38,9 @@ class MovieDetailViewController: UIViewController {
 
     private func setUpView() {
         setNavigationBar(withTitle: "Movie Detail")
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
     }
 
     
@@ -50,16 +54,23 @@ extension MovieDetailViewController: MovieDetailDelegate{
     }
     
     func loadDataOf(movie: MovieDetail) {
-        movieTitle.text = movie.title
-        movieOverview.text = movie.overview
-        movieGenre.text = "\(String(describing: movie.genres[0].name!)) - \(String(describing: movie.genres[1].name ?? ""))"
-        moviePopularity.text = String(describing: movie.popularity)
-        movieReleaseDate.text = movie.releaseDate
-        movieOriginalLanguage.text = movie.originalLanguage
         
-        if let url = movie.backdropPath, let fullUrl = URL(string: Constants().kImageURL + url){
-            self.movieImage.load(url: fullUrl)
+        DispatchQueue.main.async {
+            self.movieTitle.text = movie.title
+            self.movieOverview.text = movie.overview
+            self.movieGenre.text = "\(String(describing: movie.genres[0].name!))"
+            self.moviePopularity.text = String(describing: movie.popularity)
+            self.movieReleaseDate.text = movie.releaseDate
+            self.movieOriginalLanguage.text = movie.originalLanguage
+            
+            if let url = movie.backdropPath, let fullUrl = URL(string: Constants().kImageURL + url){
+                self.movieImage.load(url: fullUrl)
+            }
+            
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }
+       
         
     }
     
