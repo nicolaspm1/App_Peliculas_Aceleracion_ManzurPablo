@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MovieListDelegate {
     func toggleLoading()
@@ -44,4 +45,5 @@ class MovieListViewModel {
     func getMoviesCount() -> Int {
         movies.count
     }
+    
 }

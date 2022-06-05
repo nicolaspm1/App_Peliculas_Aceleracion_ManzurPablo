@@ -21,8 +21,7 @@ class MovieDetailService {
                             let decoder = JSONDecoder()
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
                             let movieResponse = try decoder.decode(MovieDetail.self, from: data)
-                            print(movieResponse)
-                            print()
+                            
                             onComplete(movieResponse)
                         } else {
                             onError()

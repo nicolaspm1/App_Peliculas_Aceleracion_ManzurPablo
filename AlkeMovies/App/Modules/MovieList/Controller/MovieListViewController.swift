@@ -46,6 +46,7 @@ extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+        print(self.movieListViewModel?.getMovieAt(indexPath.row).backdropPath! ?? "")
         
         let movie = self.movieListViewModel?.getMovieAt(indexPath.row)
         let movieIdEntero = movie?.id
@@ -58,8 +59,6 @@ extension MovieListViewController: UITableViewDelegate {
         let movieUrl = "\(Constants().kMovieDetailURL)\(movieId)\(apiKey)"
         movieDetailVC.movieUrl = movieUrl
         
-        print()
-        print(movieUrl)
         
         if let movieU = movie?.backdropPath {
             print(Constants().kImageURL + movieU)
@@ -77,6 +76,10 @@ extension MovieListViewController: UITableViewDelegate {
 
 extension MovieListViewController: UITableViewDataSource {
         
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.movieListViewModel?.getMoviesCount() ?? 0
     }
@@ -85,6 +88,7 @@ extension MovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = movieListTableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath) as! MovieTableViewCell
         
+        cell.movieName.adjustsFontSizeToFitWidth = true
         cell.movieName.text = self.movieListViewModel?.getMovieAt(indexPath.row).title
         
         didSelect(cell)

@@ -38,9 +38,6 @@ class MovieDetailViewController: UIViewController {
 
     private func setUpView() {
         setNavigationBar(withTitle: "Movie Detail")
-        
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
     }
 
     
@@ -50,7 +47,11 @@ class MovieDetailViewController: UIViewController {
 
 extension MovieDetailViewController: MovieDetailDelegate{
     func toggleLoading() {
-        print("Cargando info..")
+        
+        DispatchQueue.main.async {
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
+        }
     }
     
     func loadDataOf(movie: MovieDetail) {
@@ -67,10 +68,9 @@ extension MovieDetailViewController: MovieDetailDelegate{
                 self.movieImage.load(url: fullUrl)
             }
             
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.isHidden = true
         }
-       
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
         
     }
     

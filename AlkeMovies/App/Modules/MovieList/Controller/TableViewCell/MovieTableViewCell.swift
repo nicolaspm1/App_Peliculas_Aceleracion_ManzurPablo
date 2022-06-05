@@ -10,10 +10,11 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieName: UILabel!
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpTableViewCell()
+        movieName.numberOfLines = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,8 +30,6 @@ class MovieTableViewCell: UITableViewCell {
 
         accessory.tintColor = UIColor.white
         self.accessoryView = accessory
-        
-        self.movieName.adjustsFontSizeToFitWidth = true
     }
 
 }
