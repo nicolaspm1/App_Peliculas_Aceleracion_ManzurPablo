@@ -9,38 +9,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="153" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="AlkeMovies" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="547" height="153"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieTableViewCell" rowHeight="107" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="AlkeMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="547" height="107"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="517.5" height="153"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="517.5" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-r2-80b">
-                        <rect key="frame" x="54" y="20" width="350" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nombre Pelicula" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-r2-80b">
+                        <rect key="frame" x="87.5" y="20" width="350" height="50"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="hcM-5O-kzy"/>
                             <constraint firstAttribute="width" constant="350" id="mD8-Su-dSd"/>
                         </constraints>
-                        <attributedString key="attributedText">
-                            <fragment content="nombre  Pelicula">
-                                <attributes>
-                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <font key="NSFont" metaFont="system" size="17"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2HV-2y-IcU">
-                        <rect key="frame" x="10" y="21" width="24" height="17.5"/>
+                        <rect key="frame" x="10" y="21" width="57.5" height="37.5"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="57.5" id="3aQ-e8-R8I"/>
+                            <constraint firstAttribute="height" constant="40" id="B2s-AQ-MSk"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="tRK-r2-80b" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-20" id="67g-z7-p7A"/>
+                    <constraint firstItem="tRK-r2-80b" firstAttribute="leading" secondItem="2HV-2y-IcU" secondAttribute="trailing" constant="20" id="EhB-b5-Q5d"/>
+                    <constraint firstItem="tRK-r2-80b" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-80" id="HX3-Nc-3Km"/>
                     <constraint firstItem="2HV-2y-IcU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Uqd-6Q-qLN"/>
                     <constraint firstItem="tRK-r2-80b" firstAttribute="leading" secondItem="2HV-2y-IcU" secondAttribute="trailing" constant="20" id="Y9l-xN-Shk"/>
                     <constraint firstItem="2HV-2y-IcU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="onq-Am-uOY"/>
@@ -54,7 +54,7 @@
             <connections>
                 <outlet property="movieName" destination="tRK-r2-80b" id="wWq-ny-ih8"/>
             </connections>
-            <point key="canvasLocation" x="168.84057971014494" y="74.665178571428569"/>
+            <point key="canvasLocation" x="168.84057971014494" y="10.379464285714285"/>
         </tableViewCell>
     </objects>
     <resources>

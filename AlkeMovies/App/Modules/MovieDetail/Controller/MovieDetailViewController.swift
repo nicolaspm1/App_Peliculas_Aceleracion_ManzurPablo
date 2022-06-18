@@ -26,7 +26,7 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpView()
+//        setUpView()
         
         if let url = movieUrl {
             self.viewModel = MovieDetailViewModel(service: self.service, movieUrl: url, delegate: self)
@@ -67,6 +67,8 @@ extension MovieDetailViewController: MovieDetailDelegate{
             if let url = movie.backdropPath, let fullUrl = URL(string: Constants().kImageURL + url){
                 self.movieImage.load(url: fullUrl)
             }
+            
+            self.setNavigationBar(withTitle: movie.title)
             
         }
         self.activityIndicator.stopAnimating()

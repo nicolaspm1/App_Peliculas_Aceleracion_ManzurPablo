@@ -117,7 +117,7 @@
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.22745099660000001" green="0.26666668059999998" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="JdA-B1-3ku" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NHA-rG-HVW"/>
                 <constraint firstItem="JdA-B1-3ku" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="R8U-as-zAP"/>
@@ -128,9 +128,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
