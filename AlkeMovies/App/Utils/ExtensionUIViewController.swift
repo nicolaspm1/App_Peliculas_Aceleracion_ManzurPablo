@@ -15,10 +15,17 @@ extension UIViewController {
         self.navigationController?.navigationBar.tintColor = .systemRed
         let label = UILabel(frame: CGRect(x: 10, y: 0, width: 50, height: 40))
         label.backgroundColor = .clear
-        label.font = UIFont(name: "Marker Felt Wide", size: 20)
+        
+        if withTitle.count <= 25 {
+            label.font = UIFont(name: "Marker Felt Wide", size: 20)
+        }
+        else {
+            label.font = UIFont(name: "Marker Felt Wide", size: 16)
+        }
+        
         
         label.text = withTitle
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.textColor = .white
         label.sizeToFit()
         label.textAlignment = .center
