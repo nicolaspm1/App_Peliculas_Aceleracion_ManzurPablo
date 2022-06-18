@@ -27,7 +27,9 @@ Vista en la que se muestran por medio del componente de UIKit, UITableView, los 
 Al seleccionar alguna nos llevará a la vista final donde obtendremos más información detallada de la película seleccionada.
 
 
-<img width="272" alt="Captura de Pantalla 2022-06-05 a la(s) 15 07 44" src="https://user-images.githubusercontent.com/69824165/172064362-be8759a4-8795-4403-98b5-2bfd286605c5.png">
+<img width="335" alt="Captura de Pantalla 2022-06-18 a la(s) 10 22 07" src="https://user-images.githubusercontent.com/69824165/174440165-e580d0d6-0efc-4924-ab06-2a20ebfdada3.png">
+
+
 
 
 ### Vista 3
@@ -36,6 +38,8 @@ Vista final donde se muestra información de la película tal como su nombre, g�
 de la película. Todo esta información se mostrará por medio del componente de UIKit, UIScrollView, el cual nos permitirá poder desplazarnos hacia abajo
 para visualizar el resto de la información.
 
-<img width="331" alt="Captura de Pantalla 2022-06-05 a la(s) 15 07 19" src="https://user-images.githubusercontent.com/69824165/172064378-a6180aab-c6ad-4ab9-9db7-9b2d0ed6a505.png">
+<img width="340" alt="Captura de Pantalla 2022-06-18 a la(s) 10 36 41" src="https://user-images.githubusercontent.com/69824165/174440176-bcd7b0ea-b83a-4f65-a83a-5e248ad27c1a.png">
+
+
 
 
