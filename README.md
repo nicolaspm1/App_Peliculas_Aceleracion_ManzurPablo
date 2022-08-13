@@ -14,7 +14,8 @@ Los datos de las películas se consumen por medio de una API a través de Alamof
 ## Flujo de la aplicación 
 
 
-![Simulator Screen Recording - iPhone 13 Pro - 2022-08-13 at 00 28 49](https://user-images.githubusercontent.com/69824165/184467125-0b7ff690-5048-4cdc-8ed7-2babeec1d395.gif)
+![Simulator Screen Recording - iPhone 11 - 2022-08-13 at 00 45 07](https://user-images.githubusercontent.com/69824165/184467298-7a7a9360-63c6-4fcb-8624-b10ea6d0f674.gif)
+
 
 
 ## Vistas
